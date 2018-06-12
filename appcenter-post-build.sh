@@ -1,3 +1,4 @@
+echo "Root Post build script"
 echo "Found Unit test projects:"
 find $APPCENTER_SOURCE_DIRECTORY-regex '.*UnitTests.*\.csproj' -exec echo {} \;
 echo
