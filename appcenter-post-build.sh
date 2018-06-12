@@ -9,6 +9,6 @@ echo "Compiledprojects to run Unit tests:"
 find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*UnitTests.*\.dll' -exec echo {} \;
 echo
 echo "Running Unit tests:"
-find$APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*UnitTests.*\.dll' -exec dotnet vstest --logger:trx {} \;
+find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*UnitTests.*\.dll' -exec dotnet vstest --logger:trx {} \;
  echo
 find $APPCENTER_SOURCE_DIRECTORY/Unittest/TestResults -name '*.trx' -exec cat {} \;

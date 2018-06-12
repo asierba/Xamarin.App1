@@ -1,4 +1,4 @@
-echgo "App1.Android Post build script"
+echo "App1.Android Post build script"
 echo "Found Unit test projects:"
 find $APPCENTER_SOURCE_DIRECTORY-regex '.*UnitTests.*\.csproj' -exec echo {} \;
 echo
@@ -9,6 +9,6 @@ echo "Compiledprojects to run Unit tests:"
 find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*UnitTests.*\.dll' -exec echo {} \;
 echo
 echo "Running Unit tests:"
-find$APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*UnitTests.*\.dll' -exec dotnet vstest --logger:trx {} \;
+find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*UnitTests.*\.dll' -exec dotnet vstest --logger:trx {} \;
  echo
 find $APPCENTER_SOURCE_DIRECTORY/UnitTest/TestResults -name '*.trx' -exec cat {} \;
