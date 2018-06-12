@@ -24,10 +24,9 @@ pathOfTestResults=$(find $APPCENTER_SOURCE_DIRECTORY/App1/App1.Android/TestResul
 grep -q 'outcome="Failed"' $pathOfTestResults
 
 if [[ $? -eq 0 ]]
-then 
-echo "A test Failed" 
-exit 1
+then
+    echo "A test Failed" 
+    exit 1
 else 
-echo "all tests passed" 
-Fi
-
+    echo "all tests passed" 
+fi
