@@ -14,4 +14,4 @@ echo "Running Unit tests:"
 find $APPCENTER_SOURCE_DIRECTORY -regex '.*bin.*UnitTests.*\.dll' -exec dotnet vstest --logger:trx {} \;
 
  echo
-find $APPCENTER_SOURCE_DIRECTORY/UnitTests/TestResults -name '*.trx' -exec cat {} \;
+find $APPCENTER_SOURCE_DIRECTORY/App1/App1.Android/TestResults -name '*.trx' -exec cat {} \;
